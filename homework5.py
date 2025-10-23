@@ -3,7 +3,7 @@ import cv2
 from matplotlib import pyplot as plt
 
 
-cap = cv2.VideoCapture('hw5_1.mp4')
+cap = cv2.VideoCapture('hw5_2.mp4')
 cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
 cv2.resizeWindow("frame", 540+670, 960)
 
@@ -12,7 +12,7 @@ MIN_MATCH_COUNT = 10
 # Initiate SIFT detector
 sift = cv2.SIFT_create()
 # find the keypoints and descriptors with SIFT
-img1 = cv2.imread('hw5_img.jpg',0) # queryImage
+img1 = cv2.imread('hw5_1.jpg',0) # queryImage
 kp1, des1 = sift.detectAndCompute(img1,None)
 
 
@@ -55,3 +55,4 @@ while(cap.isOpened()):
         break
 cap.release()
 cv2.destroyAllWindows()
+
